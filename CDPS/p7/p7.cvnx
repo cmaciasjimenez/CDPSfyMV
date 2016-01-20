@@ -1,0 +1,13 @@
+<vnx_cfg>
+<default win="0,0,800,500" ontop="no"/>
+<vm name="c1" win="0,100,800,500"/>
+<vm name="c2" win="0,500,800,500"/>
+<vm name="lb" win="400,300,800,500"/>
+<vm name="s1" win="800,0,800,500"/>
+<vm name="s2" win="800,200,800,500"/>
+<vm name="s3" win="800,400,800,500"/>
+<vm name="s4" win="800,600,800,500"/>
+<vm name="nas1" win="1200,0,800,500"/>
+<vm name="nas2" win="1200,250,800,500"/>
+<vm name="nas3" win="1200,500,800,500"/>
+</vnx_cfg>

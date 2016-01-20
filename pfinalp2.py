@@ -6,6 +6,7 @@ print 'Carlos Macias Jimenez'
 
 import sys
 import os
+import time
 
 
 print 'Empezando Script'
@@ -17,9 +18,9 @@ os.system("sudo apt-get install nano")
 
 
 # Comprobamos si ya existe el directorio y, si no, lo creamos
-if os.path.exists("CDPS")):
+if os.path.exists("CDPS"):
         print('Directorio ya existe')
-elif not os.path.exists("CDPS")
+elif not os.path.exists("CDPS"):
         os.system("mkdir CDPS")
         os.chdir("CDPS")
 
@@ -41,7 +42,7 @@ os.system("vnx -f p7.xml -v --create")
 os.system("lxc-attach -n nas1 -- gluster peer probe 10.1.3.22")
 os.system("lxc-attach -n nas1 -- gluster peer probe 10.1.3.23")
 
-# Comprobamos que estan añadidos los peers
+# Comprobamos que estan anadidos los peers
 os.system("lxc-attach -n nas1 -- gluster peer status")
 
 os.system("lxc-attach -n nas1 -- gluster volume create nas replica 3 10.1.3.21:/nas 10.1.3.22:/nas 10.1.3.23:/nas force")
