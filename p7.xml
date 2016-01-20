@@ -59,6 +59,18 @@ SPAIN
     <forwarding type="ip" />
   </vm>
 
+  <vm name="nagios" type="lxc">
+    <filesystem type="cow">filesystems/rootfs_lxc-cdps</filesystem>
+    <if id="1" net="LAN1">
+      <ipv4>10.1.1.13/24</ipv4>
+    </if>
+    <if id="9" net="virbr0">
+      <ipv4>dhcp</ipv4>
+    </if>
+    <route type="ipv4" gw="10.1.1.1">10.1.0.0/16</route>   
+    <forwarding type="ip" />
+  </vm>
+
   <vm name="lb" type="lxc">
     <filesystem type="cow">filesystems/rootfs_lxc-cdps</filesystem>
     <if id="1" net="LAN1">
